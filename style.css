@@ -122,68 +122,93 @@ body {
   padding: 2em;
 }
 
-.card img{
+.card img {
   width: 15%;
   opacity: 0.8;
 }
 
-.card > .row{
+.card > .row {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.master-logo{
+.master-logo {
   display: flex;
   justify-content: flex-end;
 }
 
-.chip{
+.chip {
   opacity: 0.5;
 }
 
-.network{
+.network {
   display: flex;
   justify-content: flex-end;
   opacity: 0.5;
 }
 
-.card-num, .exp-date{
+.card-num,
+.exp-date {
   /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   opacity: 0.5;
   letter-spacing: 6px;
   text-align: left;
 }
 
-.card-balance{
-position: relative;
-top: 12em;
-transform: rotate(-5deg);
-width: 300px;
-height: 100px;
-border-radius: 20px;
-backdrop-filter: blur(10px);
-background: rgb(126, 51, 27);
-background: linear-gradient(
-  120deg,
-  rgba(70, 70, 70, 0.3) 0%,
-  rgba(70, 70, 70, 0.3) 50%,
-  rgba(102, 185, 162, 0.2) 100%
-);
-padding: 2em;
-display: flex;
-justify-content: space-between;
-align-items: center;
+.card-balance {
+  position: relative;
+  top: 12em;
+  transform: rotate(-5deg);
+  width: 300px;
+  height: 100px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgb(126, 51, 27);
+  background: linear-gradient(
+    120deg,
+    rgba(70, 70, 70, 0.3) 0%,
+    rgba(70, 70, 70, 0.3) 50%,
+    rgba(102, 185, 162, 0.2) 100%
+  );
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card-col{
+.card-col {
   /* font-family: serif; */
   font-weight: 300;
   opacity: 0.7;
   line-height: 1.8em;
 }
 
-.card-title{
+.card-title {
   font-size: 12px;
+}
+
+/* Mobile View */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .col{
+    width: 100%;
+  } 
+  .header{
+    font-size: 2em;
+  }
+  .card{
+    top: 0;
+    left: 0;
+  }
+
+  .card-balance{
+    top: 0;
+  }
 }
